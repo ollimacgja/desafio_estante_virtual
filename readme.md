@@ -8,6 +8,15 @@ Este desafio consistia na elaboração de uma API para o COB. Seguindo os crité
 * Postgresql
 * Rspec
 
+##Observações sobre Gems
+Utilizei duas gems para me auxiliar na elaboração dos testes e refatoração do código.
+* [Rubocop](https://github.com/bbatsov/rubocop)
+* [SimpleCov](https://github.com/colszowka/simplecov)
+
+A gem simplecov me mostra o percentual de cobertura de código toda vez que rodo os testes. Segundo o mesmo atingi 100% de cobertura. Essas informações podem ser vistas na pasta 'coverage\index.html'. Ele tem dividões interessantes e mostra as linhas que foram testadas pelos seus specs.
+
+A gem Rubocop é uma gem que varre seu código em busca de más práticas. Ele se baseia no [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) que é um guia de boas práticas ao se programar em Ruby. Ao rodar o comando 'rubocop' ele procura as ofensas as boas práticas e alerta para as mesmas. Consegui zerar as advertencias apenas ignorando algumas questões de layout.
+
 ##Documentação da API
 
 Está é a documentação de todos os Endpoints disponíves e seus respectivos Payloads.
