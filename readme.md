@@ -22,7 +22,7 @@ Este é o endpoint para a criação de uma nova competição.
   POST /api/v1/competition
 ```
 
-Os dados a serem enviados para a API:
+#####Os dados a serem enviados para a API:
 
 ```json
 {
@@ -41,15 +41,15 @@ Competition_type | Explicação
 'dart'| Competição de Dardos
 'dash'| Competição de 100m Rasos
 
-Dados de Resposta
+#####Dados de Resposta
 
 ```json
 {
-  "id": 14
-  "name": "Competição Dardos"
-  "competition_type": "dart"
-  "finished": false
-  "created_at": "2016-06-24T06:27:53.127Z"
+  "id": 14,
+  "name": "Competição Dardos",
+  "competition_type": "dart",
+  "finished": false,
+  "created_at": "2016-06-24T06:27:53.127Z",
   "updated_at": "2016-06-24T06:27:53.127Z"
 }
 ```
