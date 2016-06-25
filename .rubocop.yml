@@ -1,0 +1,18 @@
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Style/TrailingBlankLines:
+  Enabled: false
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/*'
+    - 'Gemfile'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
