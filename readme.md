@@ -18,20 +18,20 @@ Está é a documentação de todos os Endpoints disponíves e seus respectivos P
 
 Este é o endpoint para a criação de uma nova competição.
 
-'''
+```
   POST /api/v1/competition
-'''
+```
 
 Os dados a serem enviados para a API:
 
-'''json
+```json
 {
   "competition":{
     "name": "Competição Dardos",
     "competition_type": "dart"
   }
 }
-'''
+```
 
 ######Tipos de Competição
 As competições podem ser de Dardos ou de 100m Rasos. O campo 'competition_type' deve ser preenchido de acordo:
@@ -43,7 +43,7 @@ Competition_type | Explicação
 
 Dados de Resposta
 
-'''json
+```json
 {
   "id": 14
   "name": "Competição Dardos"
@@ -52,5 +52,5 @@ Dados de Resposta
   "created_at": "2016-06-24T06:27:53.127Z"
   "updated_at": "2016-06-24T06:27:53.127Z"
 }
-'''
+```
 
