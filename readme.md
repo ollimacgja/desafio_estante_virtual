@@ -54,3 +54,110 @@ Competition_type | Explicação
 }
 ```
 
+####Inserir Resultados em uma Competição
+
+Este é o endpoint para a criação de resultados para uma competição.
+
+```
+  POST /api/v1/result
+```
+
+#####Os dados a serem enviados para a API:
+
+```json
+{
+  "result":{
+    "competition": "Competição Dardos",
+    "athlete": "José das Couves",
+    "value": "123.45",
+    "unit": "m"
+  }
+}
+```
+
+######Observações
+As competições de Dardos recebem 3 resultados por Atleta. A competição só pode ser finalizada quando os Atletas registrados tenham feito todos seus lançamentos. A competição de 100m Rasos necessita apenas de 1 resultado por Atleta.
+
+**Obs:** Os Atletas são criados automaticamente na primeira vez que for adicionado um resultado para ele. A partir desse momento ele é localizado por seu nome.
+
+unit | Explicação
+-----------------|-----------
+'m'| A Competição de Dardos é vencida por quem lançar seus dardos mais longe. Unidade: 'Metros'
+'s'| A Competição de 100m Rasos é vencida por quem alcaçar o menor tempo. Unidade: 'Segundos'
+
+#####Dados de Resposta
+
+```json
+{
+  "id": 60,
+  "competition_id": 13,
+  "athlete_id": 5,
+  "value": 123.45,
+  "unit": "m",
+  "created_at": "2016-06-25T11:15:14.310Z",
+  "updated_at": "2016-06-25T11:15:14.310Z"
+}
+```
+
+####Finalizar uma Competição
+
+Este é o endpoint para a finalização de uma competição.
+
+```
+  POST /api/v1/competition/finish_competition
+```
+
+#####Os dados a serem enviados para a API:
+
+```json
+{
+  "competition":{
+    "name": "Competição Dardos"
+  }
+}
+```
+
+#####Dados de Resposta
+
+```
+Finished Competition
+```
+
+####Ranking de uma Competição
+
+Este é o endpoint para se obter o Ranking de uma competição. A competição não precisa estar encerrada para obter-se o Ranking.
+
+```
+  POST /api/v1/competition/ranking
+```
+
+#####Os dados a serem enviados para a API:
+
+```json
+{
+  "competition":{
+    "name": "Competição Dardos"
+  }
+}
+```
+
+#####Dados de Resposta
+
+```json
+{
+  "competition": "Competição Dardos",
+  "finished": true,
+  "ranking": {
+    1: {
+    "name": "José das Verduras",
+    "value": 125.43,
+    "unit": "Meters"
+    },
+    2: {
+    "name": "José das Couves",
+    "value": 123.45,
+    "unit": "Meters"
+    }
+  }
+}
+```
